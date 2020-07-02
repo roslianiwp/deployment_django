@@ -1,0 +1,333 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}{{ productshofa.name }} {% endblock %}
+{% block content %}
+    <section class="produk-intro mt-3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-5" style="padding-top: 70px;padding-left: 90px;">
+                    <!-- <img src="../static/images/71RiQZ0J2SL.jpg"style="padding-top: 70px;padding-left: 90px;"> -->
+                    <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                          {% for pict in productshofa.productpictureshofa_set.all %}
+                          <div class="carousel-item active" data-interval="10000">
+                            <img src="{{ pict.picture.url }}" class="d-block w-100" alt="Product picture">
+                          </div>
+                          {% endfor %}
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="deskripsi-produk">
+                        <p class="produk-judul">{{ productshofa.name }}</p>
+                        <a href="#" class="text-decoration-none blogComent float-right produk-rating">{{ productshofa.created_at }}</a>
+                        <br>
+                        <br>
+                        <p class="produk-utilitas">Due to increased demand, we temporarily have reduced product selection available for
+                            delivery to your region. We are working to improve selection availability as soon as possible.</p>
+                        <br>
+                        <p class="produk-ukuran">Color: {{ productshofa.color }}</p>
+                    </div>
+                    <div>
+                        <div class="jumbotron jumbotron-fluid produk-jumbotron">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <img src="{% static 'images/012MaZ0IyFL.png' %}" style="padding-top: 9px;">
+                                    </div>
+                                    <div class="col-sm-10">
+                                        <p class="lead"><span class="produk-alexa">alexa built-in<br></span>Talk to Alexa through this device. Learn more</p> 
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="produk-detail">
+                            <p>{{ productshofa.detail }}</p>
+                            <a href="#" class="text-decoration-none produk-see-more ">> See more product details</a> 
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="border-socmed">
+                      <div>
+                          <i class="fa fa-map-marker"></i><a style="text-decoration:none" href="https://www.amazon.com/gp/product/B084JBTYHJ/ref=s9_acss_bw_cg_TVChoic1_2a1_w?pf_rd_m=ATVPDKIKX0DER&pf_rd_s=merchandised-search-2&pf_rd_r=JC8Q7HPQ0C02NHG7MNHV&pf_rd_t=101&pf_rd_p=c8902eb5-e60e-4525-8d52-3e2025686bfd&pf_rd_i=1266092011&th=1#" class="mb-2"> Deliver to Indonesia</a>
+                      </div>
+                      <a href="https://www.amazon.com/gp/offer-listing/B084JBTYHJ/ref=dp_olp_unknown_mbc"><button type="button" class="btn btn-primary btn-lg socmed-btn">Sell All Buying Options</button></a>
+                      <hr class="line-socmed">
+                      <a href="https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fgp%2Faw%2Fd%2FB084JBTYHJ&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&"><button type="button" class="btn btn-secondary btn-lg socmed-btn-2">Add to List</button></a>
+                  </div>
+                  <br><br>
+                  <section class="share-btn">
+                      <div>
+                          <ul class="list-unstyled d-flex justify-content-center">
+                              <li><a style="text-decoration:none" href="?body=I would like to recommend this product to Amazon.com%0A%0ASAMSUNG 65-inch Class Crystal UHD TU-8000 Series - 4K UHD HDR Smart TV with Alexa Built-in (UN65TU8000FXZA, 2020 Model)%0AMore information: https://www.amazon.com/dp/B084JBTYHJ/ref=cm_sw_em_r_mt_dp_U_KnCKEbQ0GK79M&subject=I want to recommend this product on Amazon">Share</a></li>
+                              <li><a href=""><i class="fa fa-envelope-o px-1"></i></a></li>
+                              <li><a href=""><i class="fa fa-facebook px-1"></i></a></li>
+                              <li><a href=""><i class="fa fa-twitter px-1"></i></a></li>
+                              <li><a href=""><i class="fa fa-pinterest px-1"></i></a></li>
+                          </ul>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid produk-sama my-4 shadow-sm p-3 mb-5 bg-white rounded">
+            <div class="row produk-row-energi">
+                <div class="col-sm-4">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <img src="{% static 'images/contractingbusiness_3707_energyguide_you_label.png' %}" style="width: 150%;">
+                        </div>
+                        <div class="col-sm-10">
+                            <p class="produk-energi"> Product Energy Guide </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <a href="#" class="text-decoration-none produk-energi">Compare with similar items</a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid intro-movies">
+            <div class="row produk-row-movies">
+                <div class="col-sm-1">  
+                </div>
+                <div class="col-sm-5 align-self-center">
+                    <p class="produk-text-experience">{{ productshofa.desc_intro_title }}</p><br>
+                    <p>{{ productshofa.desc_intro_det }}</p>
+                </div>
+                <div class="col-sm-5 produk-col-movies">
+                    <img class="produk-gam-movies" src={{ producttv.desc_intro_pic }}>   
+                </div>
+                <div class="col-sm-1">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class = "produk-compare my-5 mx-2 text-left shadow p-3 mb-5 bg-white rounded" style="font-size: 13px;">
+      <div class ="container-fluid py-2 my-0 text-xl-center  shadow p-3 mb-5 bg-white rounded " style="font-size: 30px;font-weight: bolder;">
+        <div class="row ">
+          <div class="col-sm-12 d-flex align-items-center">
+            <p class="produk-samsung" style="color: #c45500;font-size: 24px;">Compare with similar items</p>
+          </div>
+        </div>
+      </div>
+      <div class= "container-fluid mt-0 pt-0">
+        <div class="row pt-3">
+          <div class="col-sm-2">
+          </div>
+          <div class="col-sm-10">
+            <div class="row">
+              <div class="col-sm-3 d-flex justify-content-center d-flex align-items-center">
+                <img src="{% static 'images/shofa-com-1.jpg' %}">
+              </div>
+              <div class="col-sm-3 d-flex justify-content-center d-flex align-items-center">
+                <img src="{% static 'images/shofa-com-2.jpg' %}">
+              </div>
+              <div class="col-sm-3 d-flex justify-content-center d-flex align-items-center">
+                <img src="{% static 'images/shofa-com-3.jpg' %}">
+              </div>
+              <div class="col-sm-3 d-flex justify-content-center d-flex align-items-center">
+                <img src="{% static 'images/shofa-com-4.jpg' %}">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class= "container-fluid">
+        <div class="row pt-3">
+          <div class="col-sm-2">
+          </div>
+          <div class="col-sm-10">
+            <div class="row">
+              <div class="row">
+                {% for item in product_shofa_type %}
+                <div class="col-sm-3 ">
+                  <p>{{ item.name }}</p>
+                </div>
+                {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class= "container-fluid">
+        <div class="row " style="background-color: #f6f6f6;" >
+          <div class="col-sm-2 font-weight-bold">
+            <p class="produk-tex-sim">Customer Rating </p>
+          </div>
+          <div class="col-sm-10">
+            <div class="row">
+              {% for rate in productreview %}
+              <div class="col-sm-3 ">
+                <p>{{ rate.total_rating }}</p>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <div class= "container-fluid">
+        <div class="row ">
+          <div class="col-sm-2 font-weight-bold">
+            <p class="produk-tex-sim">Price </p>
+          </div>
+          <div class="col-sm-10">
+            <div class="row">
+              {% for item in product_shofa_type %}
+              <div class="col-sm-3 ">
+                <p>{{ item.price }}</p>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class= "container-fluid">
+        <div class="row align-self-center produk-row-table-sim" style="background-color: #f6f6f6;">
+          <div class="col-sm-2 font-weight-bold">
+            <p class="produk-tex-sim">Sold By </p>
+          </div>
+          <div class="col-sm-10">
+            <div class="row ">
+              <div class="col-sm-3 ">
+                <p>Amazon.com </p>
+              </div>
+              <div class="col-sm-3 ">
+                <p>Amazon.com</p>
+              </div>
+              <div class="col-sm-3 ">
+                <p>Amazon.com</p>
+              </div>
+              <div class="col-sm-3 ">
+               <p>Amazon.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class= "container-fluid">
+        <div class="row">
+          <div class="col-sm-2 font-weight-bold">
+            <p class="produk-tex-sim">Color</p>
+          </div>
+          <div class="col-sm-10">
+            <div class="row">
+              {% for item in product_shofa_type %}
+              <div class="col-sm-3 ">
+                <p>{{ item.color }}</p>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class= "container-fluid">
+        <div class="row produk-row-table-sim" style="background-color: #f6f6f6;">
+          <div class="col-sm-2 font-weight-bold">
+            <p class="produk-tex-sim">Item Dimensions</p>
+          </div>
+          <div class="col-sm-10">
+            <div class="row">
+              {% for item in product_shofa_type %}
+              <div class="col-sm-3 ">
+                <p>{{ item.item_dimensions }}</p>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class= "container-fluid">
+        <div class="row">
+          <div class="col-sm-2 font-weight-bold">
+            <p class="produk-tex-sim">Material Type </p>
+          </div>
+          <div class="col-sm-10">
+            <div class="row">
+              {% for item in product_shofa_type %}
+              <div class="col-sm-3 ">
+                <p>{{ item.material_type }}</p>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="produk-deskripsi-komen">
+      <div class="container-fluid py-3 text-xl-left shadow p-2 mb-5 bg-white rounded mt-5">
+        <p class="text-xl-left " style="font-size: 19px;color: chocolate;font-weight: bold;">Product description </p>
+        <p class="mx-2">Size: {{ productshofa.color }}</p>
+        <p class="text-sm-left mx-3" style="font-size: 13px;">{{ productshofa.description }} </p>
+      </div>
+    </section>
+    <section class="rating-dan-komen">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-3 shadow-sm p-3 mb-5 bg-white rounded ">
+            <p style="font-size: 21px;font-weight: bold;">Customer reviews</p>
+            <h1 style="text-align: center;">4/5</h1>
+          </div>
+          <div class="col-sm-6 shadow-sm p-3 mb-5 bg-white rounded">
+            <p class="text-sm-left">Customer images</p>
+            <ul class="d-flex justify-content-center list-unstyled">
+              <li class="mx-1 img-thumbnail"><img src="{% static '/images/shofa-cus-1.jpg' %}" style="width: 150px;"></li>
+              <li class="mx-1 img-thumbnail"><img src="{% static 'images/shofa-cus-2.jpg' %}" style="width: 150px;"></li>
+              <li class="mx-1 img-thumbnail"><img src="{% static 'images/shofa-cus-3.jpg' %}"} style="width: 150px;"></li>
+              <li class="mx-1 img-thumbnail"><img src="{% static 'images/shofa-cus-4.jpg' %}" style="width: 150px;"></li>
+            </ul>
+          </div>
+          <div class="col-sm-3">
+            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-3 shadow-sm p-3 mb-5 bg-white rounded">
+            <p style="font-size: 19px;font-weight: bold;">Review this product</p>
+            <p style="font-size: 13px;">Share your thoughts with other customers</p>
+          </div>
+          <div class="col-sm-6">
+            <div class="row">
+              {% for review in productshofa.productreview_set.all %}
+              <div class="col-12">
+                <ul class="d-flex flex-row bd-highlight mb-3 list-unstyled" >
+                  <li class="p-2 bd-highlight"><img src="{% static 'images/icon.png' %}" width="30px" height="30px"></li>
+                  <li class="p-2 bd-highlight pt-3" style="font-size: 14px;"><p>user</p></li>
+                </ul>
+                <p>Rating Pengguna {{review.customer_rating}} /5</p>
+                <p style="font-size: 13px;">Reviewed in the United States on {{review.created_at}} </p>
+                <p style="font-size: 13px;">{{review.customer_review}}
+                </p>
+                <!-- commmen -->
+              </div>
+              {% endfor %}  
+            </div>
+        </div>
+        </div>
+      </div>
+      <form method="POST" action="">
+        <div action="" class="d-flex justify-content-center">
+          <div class="form-group cm-sc">
+            {% csrf_token %}
+            <textarea name="review" placeholder="tulis komen Gan" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+        </div>
+        <div action="" class="d-flex justify-content-center">
+          <div class="form-group cm-sc">
+            {% csrf_token %}
+            <textarea name="rating" placeholder="tulis rating Gan" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="submit" class="btn btn-primary mb-2">Submit</button>
+        </div>
+      </form>
+    </section>
+  {% endblock %}

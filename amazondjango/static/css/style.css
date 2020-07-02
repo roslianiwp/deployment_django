@@ -1,0 +1,562 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap');
+
+/* Header */ 
+header {
+    box-shadow: 0 0 100px 0 #C1C3C736;
+    background-color: #232f3e;
+}
+.header{
+    max-width: 100%;
+}
+.navbar-nav {
+    margin-left: auto;
+}
+
+.navigasi-bar{
+    margin-right: 0 !important;
+}
+.bar {
+    color: #19345E;
+    font-family: 'Muli', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.bar:hover {
+    color: #F47522;
+}
+
+.aktif {
+    color: #F47522;
+}
+
+.btn {
+    color: white;
+    font-family: 'Muli', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.btn-menu:hover {
+    color:white;
+}
+.btn-menu:hover a{
+    color: white;
+    text-decoration: none;
+}
+
+.logo-amazon{
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+.search-container{
+    margin-left:-10px;
+    margin-right: 0;
+}
+
+.form-control {
+    padding-left: 2.375rem;
+    width: 100%;
+}
+
+.login-area-nav{
+    margin-left: -10px;
+    padding-left: 0;
+}
+button .account-and-lists{
+    font-size: 12px;
+}
+button #account-nav{
+    font-size: 15px;
+    font-weight: bold;
+}
+.account-and-lists{
+    font-size: 15px;
+}
+
+.account-and-lists .dropdown-item{
+    font-size: 12px;
+}
+
+.sign-in-account{
+    margin-top:-5px;
+}
+
+#dropdownMenuReference{
+    z-index: 1;
+}
+
+.sign-in-account:hover{
+    margin-top:-5px;
+    border: 1px white;
+}
+
+.register-new-user{
+    padding-top: 5px;
+    font-size: 13px;
+}
+.returns-orders{
+    margin-top:-5px;
+}
+.returns-orders:hover{
+    margin-top:-5px;
+    border: 1px white;
+}
+
+.cart-icon{
+    background-color: transparent;
+    border: 0;
+}
+
+.fa .fa-shopping-cart{
+    margin-top:-15px;
+    color: white;
+}
+
+.fas .fa-map-marker-alt{
+    font-size: 14px;
+}
+.today-deals{
+    background-color: transparent;
+    border: 0;
+    color: #ccc;
+    margin-top: 18px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.jumbotron-carousel{
+    position: relative;
+
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+      bottom: 50%;
+}
+
+.inner-carousel{
+    background-color: white;
+    position: absolute;
+    top: 77%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+}
+
+.discover-features{
+    width: 200px;
+}
+
+#inner-carousel-title{
+    font-size: 25px;
+    color: #444;
+
+}
+
+#inner-carousel-link{
+    text-decoration: none;
+    color: #0066c0;
+    margin-left: 50px;
+    padding-top: 10px;
+}
+
+#inner-carousel-link:hover{
+    text-decoration: underline;
+    color: #c45500;
+}
+
+
+/* REGISTER PAGE */
+.terms-condition{
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.register-new-account:hover{
+    background-color: #f0c24f;
+}
+
+.card-title{
+    font-size: 30px;
+}
+.form-title{
+    font-size: 15px; font-weight: bold; margin-bottom: 5px;
+}
+
+
+/* FOOTER */
+.text-back-to-top {
+    color: white;
+    padding: 15px;
+    font-size: 0.9rem;
+}
+
+.btn-back-to-top {
+    border: none;
+    background-color: #37475A;
+    width: 100%;
+}
+
+.footer-1 {
+    background-color: #232f3e;
+}
+
+.footer-1-text {
+    color: #cacacb;
+    padding: 15px;
+    padding-left: 80px;
+    padding-top: 50px;
+}
+
+.footer-1-text-h6 {
+    font-size: 1rem;
+}
+
+.footer-1-text-list {
+    font-size: 0.85rem;
+    color: #cacacb;
+}
+
+.footer-2 {
+    border-top: 1px solid #3A4552;
+    background-color: #232F3E;
+}
+
+.footer-2-text {
+    color: white;
+    font-size: 0.85rem;
+}
+
+.footer-3 {
+    background-color: #131a22;
+    padding-left: 150px;
+    padding-top: 30px;
+    padding-right: 150px;
+    padding-bottom: 30px;
+    line-height: 0.75;
+}
+
+.ul-footer-3 {
+    display: inline;
+}
+.form-footer-3 {
+    background-color: transparent;
+}
+
+.footer-3-text-list {
+    font-size: 0.7rem;
+    color: #cacacb;
+    padding: 0;
+    margin-inline-start: 0em;
+}
+
+.footer-4 {
+    background-color: #131a22;
+    padding-bottom: 30px;
+}
+
+.footer-4-text {
+    font-size: 0.65rem;
+    color: #cacacb;
+    padding: 0;
+    margin: 0;
+}
+
+#inlineFormCustomSelect {
+    background-color: transparent;
+    border-color: #848688;
+    width: 117px;
+    box-shadow: none;
+    color: white;
+    font-size: 0.85rem;
+}
+
+/* SOCMED SECTION PRODUCT PAGE */
+.border-socmed {
+    border : solid 2px #e7e7e7;
+    width: 100%;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+}
+
+.line-socmed {
+    width: 85%;
+    color: #e7e7e7;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.socmed-btn {
+    width: 85%;
+    background: linear-gradient( #f6dc9d, #f0c24f);
+    border: solid 1px black;
+    border-radius: 3px;
+    color: black;
+    font-weight: normal;
+    font-size: 0.85em;
+    padding: 5px;
+
+}
+
+.socmed-btn-2 {
+    width: 85%;
+    background: linear-gradient( #f6f7f9, #e7e9ec);
+    border: solid 1px black;
+    border-radius: 3px;
+    color: black;
+    font-weight: normal;
+    font-size: 0.85em;
+    padding: 5px;
+}
+
+.share-btn {
+    display: inline;
+}
+
+.fa-envelope-o {
+    color: #6c7878;
+}
+
+.fa-facebook {
+    color: #3664a2;
+}
+
+.fa-twitter {
+    color: #68aed4;
+}
+
+
+/* INTRO HALAMAN PRODUK*/
+
+.huruf-bar {
+    font-family: 'Roboto', sans-serif;
+    color: #f9b93f;
+    font-size: small;
+}
+
+.produk-judul {
+    font-family: 'Muli', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+.produk-utilitas {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.produk-rating {
+    font-size:14px;
+}
+
+
+.input-group.md-form.form-sm.form-1 input{
+    border: 1px solid #bdbdbd;
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+  }
+
+.produk-ukuran {
+    font-size: 14px;
+    font-weight: bolder;
+
+}
+
+.produk-pil-kur {
+    font-family: 'Muli', sans-serif;
+    border-radius: 0%;
+    padding: .00rem .7rem;
+    font-size: .8rem;
+    line-height: 1.9;
+    background-color: transparent;
+    background-image: none;
+    border-color: gray;
+    color: black;
+}
+
+.produk-pil-kur:hover {
+    background-color: rgb(236, 229, 229);
+    border-color: grey;
+}
+
+.jumbotron {
+    padding: 0rem 0rem;
+    border-radius: 10px;
+}
+
+.lead {
+    font-size: 13px;
+}
+
+.produk-alexa {
+    font-size: 18px;
+}
+
+.produk-detail-list {
+    font-size: 13px;
+}
+
+.produk-see-more {
+    font-size: 13px;
+}
+
+.produk-energi {
+    font-size: 13px ;
+}
+
+.produk-question {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.produk-row-question {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.produk-row-energi {
+    padding-bottom: 28px;
+}
+
+/* PRODUK-INTRO */
+
+.produk-find {
+    font-size: 13px 
+    
+}
+
+/* INTRO-MOVIES */
+
+.produk-row-movies {
+    margin-top: 40px;
+    margin-bottom: 65px;
+}
+
+.produk-gam-movies {
+    width: 619px;
+}
+
+.produk-col-movies {
+    width: 50%;
+    vertical-align: middle;
+}
+
+.produk-ready {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.produk-text-experience{
+    font-size: 32px;
+    line-height: 1.2em;
+}
+
+
+/* intro-produk-det */
+
+.produk-tomobol-car-1 {
+    background-color: #000;
+    border: 2px solid #000;
+    width: 200px;
+    height: 35px;
+    margin-left: 430px;
+    border-radius: 50px;
+   
+}
+
+.produk-tombol-crystal {
+    color: black;
+    font-size: 14px;
+
+}
+
+.produk-tomobol-car-2 {
+    border: 2px solid #000;
+    width: 200px;
+    height: 35px;
+    margin-right: 430px;
+    border-radius: 50px;
+ 
+}
+
+/* produk-compare */
+
+.produk-row-table-sim {
+    background-color: solid rgb(177, 172, 172);
+}
+
+.fa-pinterest {
+    color: #df2209;
+}
+
+/* TAMBAHAN CAROUSELLLL */
+
+/* Container holding the image and the text */
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+/* Bottom left text */
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+/* Top left text */
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+/* Top right text */
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+/* Centered text */
+.centered {
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+} 
+
+.produk-car-tul-1 {
+    
+    font-weight: bold;
+    padding-bottom: 100px;
+}
+
+.produk-car-tul-2 {
+    
+    font-size: 29px;
+    font-weight: bold;
+}
+
+.produk-car-tul-3 {
+    padding-top: 120px;
+}
+
+.cm-sc {
+    width: 60%;
+    align-content: center;
+}

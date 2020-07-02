@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Sign-In</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+  <section>
+    <div class="container">
+      <div class="row d-flex text-center justify-content-center mt-3 mb-3" style="padding-top:5px;">
+          <a href="/"><img src="../static/images/1200px-Amazon_logo.svg.png" alt="" style="width: 14%;"></a>
+      </div>
+      <div class="row text-center d-flex justify-content-center">
+        <div class="text-center ">
+          <div class="text-left" style="width:22rem; color: RGB(17,17,17); border: 1px solid #ddd; border-radius: 4px; padding-left:15px;">
+            <h5 style="font-size: 25px; margin-top:10px; margin-bottom:15px;"">Sign-In</h5>
+            <div class="border-top" style="margin-bottom:20px; border-top:1px solid #ddd; box-shadow: 5px 10px 18px #ddd; margin-left:10px;width:90%;"></div>
+            <form method="POST" action="{% url 'login' %}">
+              {% csrf_token %}
+              <div class="form-group">
+                <label for=" email" style="font-size: 13px; font-weight: bold;">Email address</label>
+                <input type="email" name="email" class="form-control" id="" aria-describedby="emailHelp" style="width:96%;">
+              </div>
+              <div class="form-group">
+                <label for=" password" style="font-size: 13px; font-weight: bold;">Password</label>
+                <input type="password" name="password" class="form-control" id="" style="width:96%;">
+              </div>
+              <button type="submit" name="" class="btn btn-primary register-new-account mb-4" style="width:96%; border-radius:3px; color: #1f162f; border:1px solid #9c7e31;margin-bottom:10px; padding:5px; padding-left: 20px; padding-right: 20px; background-color: #f1c862;">Sign-In</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

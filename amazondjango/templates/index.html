@@ -1,0 +1,62 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}Amazon Home{% endblock %}
+
+{% block content %}
+<!-- CAROUSEL JUMBOTRON -->
+  <div class="container-fluid">
+    <div class="row  d-flex justify-content-center jumbotron-carousel">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+            <div class="img"><img class="d-block img-fluid" src="{% static 'images/Fuji_TallHero_ShipATW_Modified_en_US_1x.jpg' %}" alt="First slide"></div>
+          </div>
+          <div class="carousel-item">
+            <div class="img"><img class="d-block img-fluid" src="{% static 'images/Hero_Currency_EN_1X.jpg' %}" alt="Second slide"></div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+ 
+      <div class="inner-carousel">
+        <div class="row ml-4 mt-1">
+          <span id="inner-carousel-title">Discover Amazon</span>
+          <a href="" id="inner-carousel-link">Click to learn more</a>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <img class="discover-features" src="{% static 'images/Fuji_Bubble_8Languages_en_US_updated_1x.png' %}" alt="Shop in 8 languages">
+          </div>
+          <div class="col-sm">
+            <img src="{% static 'images/AIS_Bubble_Currency_en_US_1X.jpg' %}" alt="Shop in 60+ currencies">
+          </div>
+          <div class="col-sm">
+            <img src="{% static 'images/AIS_Bubble_SecurePayment_en_US_1X.jpg' %}" alt="Secure payments">
+          </div>
+          <div class="col-sm">
+            <img src="{% static 'images/AIS_Bubble_ImportFees_en_US_1X.jpg' %}" alt="Estimated export fees">
+          </div>
+          <div class="col-sm">
+            <img src="{% static 'images/AIS_Bubble_TrackPackage_en_US_1X.jpg' %}" alt="Track your package">
+          </div>
+          <div class="col-sm">
+            <img src="{% static 'images/AIS_Bubble_247CS_en_US_1X.jpg' %}" alt="24/7 Customer Service">
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+{% endblock %} <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="../static/css/footer.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Registration</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+  <section>
+    <div class="container">
+      <div class="row d-flex text-center justify-content-center mt-3 mb-3" style="padding-top:5px;">
+          <a href="/"><img src="{% static 'images/1200px-Amazon_logo.svg.png' %}" alt="" style="width: 14%;"></a>
+      </div>
+      <div class="row text-center d-flex justify-content-center">
+        <div class="text-center ">
+          <div class="text-left" style="width:22rem; color: RGB(17,17,17); border: 1px solid #ddd; border-radius: 4px; padding-left:15px;">
+            {% if registered %}
+              <h5>Thank you for registering!</h6>
+            {% else %}
+              <h5 style="font-size: 25px; margin-top:10px; margin-bottom:15px;" >Create Account</h5>
+              <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group text-left">
+                  <label for="formGroupExampleInput firstname" class="form-title" style="font-size: 13px; font-weight: bold;">First Name</label>
+                  <input type="text" name="firstname" class="form-control" id="formGroupExampleInput" style="width:96%;">
+                </div>
+                <div class="form-group text-left">
+                  <label for="formGroupExampleInput lastname" style="font-size: 13px; font-weight: bold;">Last Name</label>
+                  <input type="text" name="lastname" class="form-control" id="formGroupExampleInput" style="width:96%;">
+                </div>
+                <div class="form-group text-left">
+                  <label for="exampleInputEmail1 email" style="font-size: 13px; font-weight: bold;">Email address</label>
+                  <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="width:96%;">
+                </div>
+                <div class="form-group text-left">
+                  <label for="exampleInputPassword1 password" style="font-size: 13px; font-weight: bold;">Password</label>
+                  <input type="password" name="password" class="form-control" id="exampleInputPassword1" style="width:96%;">
+                </div>
+                <div class="form-group text-left">
+                  <label for="exampleInputPassword1 password" style="font-size: 13px; font-weight: bold;">Re-enter Password</label>
+                  <input type="password" name="password" class="form-control" id="exampleInputPassword1" style="width:96%;">
+                </div>
+                <button type="submit" name="" class="btn btn-primary register-new-account" style="width:96%; border-radius:3px; color: #1f162f; border:1px solid #9c7e31;margin-bottom:10px; padding:5px; padding-left: 20px; padding-right: 20px; background-color: #f1c862;">Create your Amazon account</button>
+                <div class="terms-condition border-bottom" style="font-size: 12px; border-bottom:5px black; text-decoration:none;">By creating an account, you agree to Amazon's <br />
+                  <a href="https://www.amazon.com/gp/help/customer/display.html/ref=ap_register_notification_condition_of_use?ie=UTF8&nodeId=508088" style="text-decoration: none;">Conditons of Use</a> and 
+                  <a href="https://www.amazon.com/gp/help/customer/display.html/ref=ap_register_notification_privacy_notice?ie=UTF8&nodeId=468496" style="text-decoration: none;">Privacy Notice.</a></div>
+                  <div>
+                    <p style="font-size: 13px;">Already have an account? <a href="" style="text-decoration: none;">Sign-In <span style="font-size: 8px;">&#x27a4;</span></a></p>
+                  </div>
+              </form>
+              {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
